@@ -13,6 +13,27 @@
         }, options);
 
 
+        var variables = {
+            'nextletterindex'   : 0,
+            'instantiated'      : false,
+            'submitform'        : false
+        }
+
+        var methods = {
+
+            reset : function(lettersContainer) {
+                variables.nextletterindex = 0;
+                newConfirmStr = '';
+                for (var i = 0; i < settings.texttotype.length; i++) {
+                    newConfirmStr += '*';
+                }
+                lettersContainer.text(newConfirmStr);
+                variables.instantiated = true;
+            }
+
+        }
+
+
         return this.each(function() {
 
             $(this).after('<div class="confirmDialog '+ settings.class +'" style="display: none">Confirm here</div>');
@@ -44,10 +65,15 @@
 
 
             $(this).click(function() {
-                this.dialogElement.show();
-                var nextLetterIndex = 0;
-                var nextLetterToType = settings.texttotype.charAt(nextLetterIndex);
                 var dialogElement = this.dialogElement;
+                dialogElement.show();
+
+                if (!settings.persist || !variables.instantiated) {
+                    methods.reset(dialogElement.find('.untypedletterscontainer'));
+                }
+
+
+                var nextLetterToType = settings.texttotype.charAt(variables.nextletterindex);
                 dialogElement.find('input[type=text]').focus().keypress(function(e) {
 
                     var typedChar = String.fromCharCode(e.which);
@@ -57,18 +83,16 @@
                     }
 
                     if (typedChar == nextLetterToType) {
-                        nextLetterIndex++;
-                        nextLetterToType = settings.texttotype.charAt(nextLetterIndex);
-                        var newConfirmStr = settings.texttotype.substr(0, nextLetterIndex);
+                        variables.nextletterindex++;
+                        nextLetterToType = settings.texttotype.charAt(variables.nextletterindex);
+                        var newConfirmStr = settings.texttotype.substr(0, variables.nextletterindex);
 
-                        for (var i = nextLetterIndex; i < settings.texttotype.length; i++) {
+                        for (var i = variables.nextletterindex; i < settings.texttotype.length; i++) {
                             newConfirmStr += '*';
                         }
                         dialogElement.find('.untypedletterscontainer').text(newConfirmStr);
 
-
-
-                        if (nextLetterIndex == settings.texttotype.length) {
+                        if (variables.nextletterindex == settings.texttotype.length) {
                             eval(onClickCode);
                             dialogElement.hide();
                         }
