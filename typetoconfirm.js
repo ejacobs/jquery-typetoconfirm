@@ -1,22 +1,83 @@
 (function( $ ) {
     $.fn.typeToConfirm = function(options) {
 
+
         var settings = $.extend({
-            'position'        : 'above',
-            'class'           : 'typetoconfirm'
+            'class'           : 'typetoconfirm',
+            'texttotype'      : 'confirm',
+            'casesensitive'   : true,
+            'message'         : 'Please type the word \'{{t}}\' to confirm',    // {{t}} is replace with the textotype setting
+            'arrowposition'   : 'middle',                                       // top, bottom, middle
+            'position'        : 'above',                                        // above, below, left, right, auto
+            'persist'         : false
         }, options);
 
+
         return this.each(function() {
+
             $(this).after('<div class="confirmDialog '+ settings.class +'" style="display: none">Confirm here</div>');
+            this.dialogElement = $(this).next('.confirmDialog');
             var onClickCode = $(this).attr('onclick');
             if (onClickCode != undefined) {
                 $.data(this, 'executeonconfirm', $(this).attr('onclick'));
                 $(this).removeAttr('onclick');
             }
 
-            $(this).click(function() {
-                $(this).next('.confirmDialog').show();
+            var newHtml = '<input type="text" title="'+ settings.texttotype +'" style="width: 0; height: 0; float: left;">';
+            newHtml += '<div class="untypedletterscontainer">';
+            for ( var i = 0; i < settings.texttotype.length; i++ ) {
+                newHtml += '*';
+            }
+            newHtml += '</div>';
+            newHtml += '<div class="messagecontainer">'+ settings.message.replace(/\{\{t\}\}/, settings.texttotype) +'</div>';
+            newHtml += '<div style="position: absolute; width: 10px; height: 10px; background-color: white"></div>';
+
+
+            this.dialogElement.html(newHtml);
+
+            // In case the user clicks on an element within the dialog, make sure the input stays in focus
+            this.dialogElement.find('div').click(function() {
+                $(this).closest('div.confirmDialog').find('input[type=text]').focus()
+                $(this).focus();
             });
+
+
+
+            $(this).click(function() {
+                this.dialogElement.show();
+                var nextLetterIndex = 0;
+                var nextLetterToType = settings.texttotype.charAt(nextLetterIndex);
+                var dialogElement = this.dialogElement;
+                dialogElement.find('input[type=text]').focus().keypress(function(e) {
+
+                    var typedChar = String.fromCharCode(e.which);
+                    if (!settings.casesensitive) {
+                        typedChar = typedChar.toLowerCase();
+                        nextLetterToType = nextLetterToType.toLowerCase();
+                    }
+
+                    if (typedChar == nextLetterToType) {
+                        nextLetterIndex++;
+                        nextLetterToType = settings.texttotype.charAt(nextLetterIndex);
+                        var newConfirmStr = settings.texttotype.substr(0, nextLetterIndex);
+
+                        for (var i = nextLetterIndex; i < settings.texttotype.length; i++) {
+                            newConfirmStr += '*';
+                        }
+                        dialogElement.find('.untypedletterscontainer').text(newConfirmStr);
+
+
+
+                        if (nextLetterIndex == settings.texttotype.length) {
+                            eval(onClickCode);
+                            dialogElement.hide();
+                        }
+                    }
+                });
+            });
+
+
+
         });
 
     };
