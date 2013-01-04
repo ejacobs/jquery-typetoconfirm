@@ -16,7 +16,8 @@
         var variables = {
             'nextletterindex'   : 0,
             'instantiated'      : false,
-            'submitform'        : false
+            'submitform'        : false,
+            'confirmedsubmit'   : false
         }
 
         var methods = {
@@ -33,8 +34,18 @@
 
         }
 
+        // Hide the popup menus on click out
 
         return this.each(function() {
+
+            if ($(this).is('input[type=submit]')) {
+                $(this).closest("form").submit(function(e) {
+                    if (!variables.confirmedsubmit) {
+                        e.preventDefault();
+                    }
+                });
+                variables.submitform = true;
+            }
 
             $(this).after('<div class="confirmDialog '+ settings.class +'" style="display: none">Confirm here</div>');
             this.dialogElement = $(this).next('.confirmDialog');
@@ -66,6 +77,7 @@
 
             $(this).click(function() {
                 var dialogElement = this.dialogElement;
+                $('.confirmDialog').hide();
                 dialogElement.show();
 
                 if (!settings.persist || !variables.instantiated) {
@@ -94,8 +106,16 @@
 
                         if (variables.nextletterindex == settings.texttotype.length) {
                             eval(onClickCode);
+                            if (variables.submitform) {
+                                variables.confirmedsubmit = true;
+                                dialogElement.closest('form').submit();
+                            }
                             dialogElement.hide();
                         }
+                        else if (e.keyCode ==  27) {
+                            dialogElement.hide();
+                        }
+
                     }
                 });
             });
@@ -105,4 +125,12 @@
         });
 
     };
+
+    // Hide all on esc
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            $('.confirmDialog').hide();
+        }
+    });
+
 })(jQuery);
