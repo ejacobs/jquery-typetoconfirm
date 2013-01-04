@@ -1,0 +1,11 @@
+html, body { font-family: Helvetica; margin: 0; float: left; width: 100% }
+
+
+
+.container {  position: relative; width: 900px; min-height: 1000px; background-color: #DFDFDF; margin: 0 auto; }
+.row { float: left; width: 100%; margin-top: 75px }
+.col { width: 31%; float: left; }
+
+#test1 { cursor: pointer; border: 3px solid maroon; width: 75px; font-weight: bold; text-align: center; }
+#test2 { cursor: pointer; border: 3px solid maroon; width: 75px; font-weight: bold; text-align: center; }
+#test3 { cursor: pointer; border: 3px solid maroon; width: 75px; font-weight: bold; text-align: center; }

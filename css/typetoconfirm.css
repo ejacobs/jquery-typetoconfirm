@@ -1,3 +1,4 @@
 .typetoconfirm { position: absolute; background-color: white; border: 5px solid #336699; float: left; height: auto; width: 350px; text-align: center }
+.typetoconfirm .arrowContainer { background-image: url("images/arrow-up-tip.png"); background-repeat: no-repeat; height: 9px; position: absolute; width: 9px; }
 .untypedletterscontainer { float: left; width: 100%; font-size: 24px; letter-spacing: 6px }
-.messagecontainer { float: left; }
+.messagecontainer { float: left; font-family: Helvetica; width: 100%; text-align: center; margin-bottom: 5px  }

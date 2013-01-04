@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc55068-42ab-4f81-8a25-2596afaebba0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/arrow-up-tip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/css/example1.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example1.html" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\typetoconfirm.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\example1.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/typetoconfirm.css" afterPath="$PROJECT_DIR$/css/typetoconfirm.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typetoconfirm.js" afterPath="$PROJECT_DIR$/typetoconfirm.js" />
     </list>
     <ignored path="typetoconfirm.iws" />
@@ -23,21 +34,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="typetoconfirm.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="typetoconfirm.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typetoconfirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="777" selection-end="777" vertical-scroll-proportion="0.34151787">
+            <state line="164" column="23" selection-start="6613" selection-end="6613" vertical-scroll-proportion="-49.12">
               <folding>
-                <marker date="1357331338596" expanded="true" signature="2164:2234" placeholder="..." />
+                <marker date="1357340864813" expanded="true" signature="2684:2754" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example1.html">
+      <file leaf-file-name="example1.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/example1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="45" selection-start="355" selection-end="355" vertical-scroll-proportion="-6.5384617">
+            <state line="16" column="20" selection-start="490" selection-end="490" vertical-scroll-proportion="0.31264368">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example1.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/css/example1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -46,7 +70,7 @@
       <file leaf-file-name="typetoconfirm.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/typetoconfirm.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="87" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+            <state line="3" column="108" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -65,9 +89,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/example1.html" />
         <option value="$PROJECT_DIR$/css/typetoconfirm.css" />
         <option value="$PROJECT_DIR$/typetoconfirm.js" />
+        <option value="$PROJECT_DIR$/css/example1.css" />
+        <option value="$PROJECT_DIR$/example1.html" />
+        <option value="$PROJECT_DIR$/examples/example1.html" />
       </list>
     </option>
   </component>
@@ -122,20 +148,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -174,6 +186,13 @@
         </serverdata>
       </server>
     </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\examples\css" />
+      <recent name="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\examples" />
+      <recent name="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\css\images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -221,7 +240,15 @@
       <created>1357329048641</created>
       <updated>1357329048641</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented persistence option&#10;Added reset() method to reset the dialog if re-clicked">
+      <created>1357331401927</created>
+      <updated>1357331401927</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented functionality for form submit buttons">
+      <created>1357333649463</created>
+      <updated>1357333649463</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -234,7 +261,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -284,7 +311,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added core functionality&#10;Added input field to capture keypress events (hidden by absolute div)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented functionality for form submit buttons" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -300,6 +327,8 @@
     <MESSAGE value="Initial blank js file" />
     <MESSAGE value="1) Added css dir for styling of dialog&#10;2) Added example1.html to demonstrate usage&#10;3) Added basic jQuery plugin skeleton" />
     <MESSAGE value="Added core functionality&#10;Added input field to capture keypress events (hidden by absolute div)" />
+    <MESSAGE value="Implemented persistence option&#10;Added reset() method to reset the dialog if re-clicked" />
+    <MESSAGE value="Implemented functionality for form submit buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -307,23 +336,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/typetoconfirm.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="87" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="355" selection-end="355" vertical-scroll-proportion="-6.5384617">
+        <state line="3" column="108" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/typetoconfirm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="777" selection-end="777" vertical-scroll-proportion="0.34151787">
+        <state line="164" column="23" selection-start="6613" selection-end="6613" vertical-scroll-proportion="-49.12">
           <folding>
-            <marker date="1357331338596" expanded="true" signature="2164:2234" placeholder="..." />
+            <marker date="1357340864813" expanded="true" signature="2684:2754" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/css/example1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/example1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="490" selection-end="490" vertical-scroll-proportion="0.31264368">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
