@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc55068-42ab-4f81-8a25-2596afaebba0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/blue-arrows.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/green-arrows.png" />
-      <change type="DELETED" beforePath="C:\Users\evan\PhpstormProjects\typetoconfirm\typetoconfirm\css\images\arrow-up-tip.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/typetoconfirm.css" afterPath="$PROJECT_DIR$/css/typetoconfirm.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/css/example1.css" afterPath="$PROJECT_DIR$/examples/css/example1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example1.html" afterPath="$PROJECT_DIR$/examples/example1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typetoconfirm.js" afterPath="$PROJECT_DIR$/typetoconfirm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="typetoconfirm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +26,30 @@
       <file leaf-file-name="typetoconfirm.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typetoconfirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="49" selection-start="132" selection-end="147" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="366" selection-end="1209" vertical-scroll-proportion="-10.2">
               <folding>
-                <marker date="1357360523383" expanded="true" signature="1930:1964" placeholder="..." />
-                <marker date="1357360523383" expanded="true" signature="3164:3234" placeholder="..." />
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1357363392719" expanded="true" signature="2022:2056" placeholder="..." />
+                <marker date="1357363392719" expanded="true" signature="3256:3326" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="34" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,7 +57,7 @@
       <file leaf-file-name="example1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/example1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="38" selection-start="2732" selection-end="2732" vertical-scroll-proportion="-24.961538">
+            <state line="79" column="28" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-24.192308">
               <folding />
             </state>
           </provider>
@@ -59,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typetoconfirm.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="typetoconfirm.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/typetoconfirm.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="48" selection-start="631" selection-end="631" vertical-scroll-proportion="0.1328125">
+            <state line="11" column="1" selection-start="820" selection-end="836" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,12 +97,15 @@
         <option value="$PROJECT_DIR$/css/example1.css" />
         <option value="$PROJECT_DIR$/example1.html" />
         <option value="$PROJECT_DIR$/examples/css/example1.css" />
-        <option value="$PROJECT_DIR$/typetoconfirm.js" />
-        <option value="$PROJECT_DIR$/examples/example1.html" />
         <option value="$PROJECT_DIR$/css/typetoconfirm.css" />
+        <option value="$PROJECT_DIR$/examples/example1.html" />
+        <option value="$PROJECT_DIR$/typetoconfirm.js" />
+        <option value="$PROJECT_DIR$/LICENSE.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -138,38 +154,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typetoconfirm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,7 +261,19 @@
       <created>1357341144713</created>
       <updated>1357341144713</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed positioning issues&#10;Implemented before and after text&#10;Changed option names to be more clear&#10;Added more examples">
+      <created>1357360892668</created>
+      <updated>1357360892668</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added license&#10;Added events for onCreate and onConfirm">
+      <created>1357363538656</created>
+      <updated>1357363538656</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added README content">
+      <created>1357364350667</created>
+      <updated>1357364350667</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -340,7 +336,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved examples to own directory&#10;Started implementing dialog position options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README content" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -359,25 +355,18 @@
     <MESSAGE value="Implemented persistence option&#10;Added reset() method to reset the dialog if re-clicked" />
     <MESSAGE value="Implemented functionality for form submit buttons" />
     <MESSAGE value="Moved examples to own directory&#10;Started implementing dialog position options" />
+    <MESSAGE value="Fixed positioning issues&#10;Implemented before and after text&#10;Changed option names to be more clear&#10;Added more examples" />
+    <MESSAGE value="Added license&#10;Added events for onCreate and onConfirm" />
+    <MESSAGE value="Added README content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/example1.html">
+    <entry file="file://$PROJECT_DIR$/css/typetoconfirm.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="38" selection-start="2732" selection-end="2732" vertical-scroll-proportion="-24.961538">
+        <state line="11" column="1" selection-start="820" selection-end="836" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typetoconfirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="49" selection-start="132" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1357360523383" expanded="true" signature="1930:1964" placeholder="..." />
-            <marker date="1357360523383" expanded="true" signature="3164:3234" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -388,9 +377,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/typetoconfirm.css">
+    <entry file="file://$PROJECT_DIR$/typetoconfirm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="48" selection-start="631" selection-end="631" vertical-scroll-proportion="0.1328125">
+        <state line="15" column="0" selection-start="366" selection-end="1209" vertical-scroll-proportion="-10.2">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1357363392719" expanded="true" signature="2022:2056" placeholder="..." />
+            <marker date="1357363392719" expanded="true" signature="3256:3326" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/example1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="28" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-24.192308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

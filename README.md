@@ -1,4 +1,4 @@
-jQuery TypeToConfirm
+jQuery TypeToConfirm by Evan Jacobs
 =============
 
 Sometimes user actions are major and cannot be undone. In these situations it's a good idea to make sure the user is
