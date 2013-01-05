@@ -3,14 +3,17 @@
 
 
         var settings = $.extend({
-            'class'           : 'typetoconfirm',
-            'texttotype'      : 'confirm',
-            'casesensitive'   : true,
-            'message'         : 'Please type the word \'{{t}}\' to confirm',    // {{t}} is replace with the textotype setting
-            'arrowposition'   : 'middle',                                       // top, bottom, middle
-            'position'        : 'above',                                        // above, below, left, right, auto
-            'arrowmargintop'  : 4,
-            'dialogmargintop' : 8
+            'class'             : 'typetoconfirm',
+            'texttotype'        : 'confirm',
+            'casesensitive'     : true,
+            'beforemessage'     : false,
+            'aftermessage'      : 'Please type the word \'{{t}}\' to confirm',    // {{t}} is replace with the textotype setting
+            'align'             : 'middle',              // can be left, right if position is above or below
+                                                         // can be top, bottom if position is left or right
+            'position'          : 'above',               // above, below, left, right, auto
+            'arrowmargin'       : 4,
+            'dialogmargin'      : 2,
+            'charsymbol'        : '*'
         }, options);
 
 
@@ -28,7 +31,7 @@
                 variables.nextletterindex = 0;
                 newConfirmStr = '';
                 for (var i = 0; i < settings.texttotype.length; i++) {
-                    newConfirmStr += '*';
+                    newConfirmStr += settings.charsymbol;
                 }
                 lettersContainer.text(newConfirmStr);
 
@@ -37,7 +40,6 @@
 
         }
 
-        // Hide the popup menus on click out
 
         return this.each(function() {
 
@@ -50,7 +52,7 @@
                 variables.submitform = true;
             }
 
-            $(this).after('<div class="confirmDialog '+ settings.class +'" style="display: none"></div>');
+            $(this).after('<div class="confirmDialog" style="display: none; position: absolute;"></div>');
             this.dialogElement = $(this).next('.confirmDialog');
             var onClickCode = $(this).attr('onclick');
             if (onClickCode != undefined) {
@@ -58,15 +60,20 @@
                 $(this).removeAttr('onclick');
             }
 
-            var newHtml = '<div class="arrowContainer"></div>';
+            var newHtml = '<div class="confirmDialogInner '+ settings.class +'"><div class="arrowContainer"></div>';
             newHtml += '<input type="text" title="'+ settings.texttotype +'" style="width: 0; height: 0; float: left;">';
+            if (settings.beforemessage) {
+                newHtml += '<div class="messagecontainer">'+ settings.beforemessage.replace(/\{\{t\}\}/, settings.texttotype) +'</div>';
+            }
             newHtml += '<div class="untypedletterscontainer">';
             for ( var i = 0; i < settings.texttotype.length; i++ ) {
-                newHtml += '*';
+                newHtml += settings.charsymbol;
             }
             newHtml += '</div>';
-            newHtml += '<div class="messagecontainer">'+ settings.message.replace(/\{\{t\}\}/, settings.texttotype) +'</div>';
-            newHtml += '<div style="position: absolute; width: 10px; height: 10px; background-color: white"></div>';
+            if (settings.aftermessage) {
+                newHtml += '<div class="messagecontainer">'+ settings.aftermessage.replace(/\{\{t\}\}/, settings.texttotype) +'</div>';
+            }
+            newHtml += '<div style="position: absolute; width: 10px; height: 10px; background-color: white"></div></div>';
 
 
             this.dialogElement.html(newHtml);
@@ -81,43 +88,78 @@
 
             $(this).click(function() {
                 var dialogElement = this.dialogElement;
+                var dialogElementInner = dialogElement.find('.confirmDialogInner')
                 $('.confirmDialog').hide();
                 dialogElement.show();
 
                 methods.reset(dialogElement.find('.untypedletterscontainer'));
 
-
-                // copy start
-
-                var buttonPosition = $(this).position();
-                var arrowContainerElement = dialogElement.find("> .arrowContainer")
+                var buttonPos = $(this).position();
+                var arrowContainerElement = dialogElement.find(".arrowContainer")
                 var arrowSize = arrowContainerElement.height();
 
-                if (settings.arrowposition == 'middle') {
-                    dialogElement.css('margin-left',  ((dialogElement.width() / 2) - ($(this).width() / 2)) * (-1) );
 
-                    arrowContainerElement.css('margin-left', (dialogElement.outerWidth() / 2) - (arrowSize / 2) );
+                if ((settings.position == 'above') || (settings.position == 'below')) {
+
+                    if (settings.align == 'left') {
+                        dialogElement.css('left',  buttonPos.left );
+                        arrowContainerElement.css('margin-left', ($(this).outerWidth() / 2) - (arrowSize / 2) );
+                    }
+                    else if (settings.align == 'right') {
+                        dialogElement.css('left',  buttonPos.left - dialogElementInner.outerWidth() + $(this).outerWidth() );
+                        arrowContainerElement.css('margin-left', (dialogElementInner.outerWidth()) - ($(this).outerWidth() / 2)  - (arrowSize)  );
+                    }
+                    else {
+                        dialogElement.css('left', (buttonPos.left) - (dialogElementInner.outerWidth() / 2 ) + ($(this).outerWidth() / 2) );
+                        arrowContainerElement.css('margin-left', (dialogElementInner.outerWidth() / 2) - (arrowSize / 2) );
+                    }
+
+
+                    if (settings.position == 'below') {
+                        dialogElement.css('top',  buttonPos.top + $(this).outerHeight() + arrowSize + settings.dialogmargin  );
+                        arrowContainerElement.css('margin-top', (-arrowSize) - settings.arrowmargin );
+                        arrowContainerElement.addClass('up');
+                    }
+                    else {
+                        dialogElement.css('top',  buttonPos.top - dialogElementInner.outerHeight() - arrowSize - settings.dialogmargin  );
+                        arrowContainerElement.css('margin-top', dialogElementInner.outerHeight() + settings.arrowmargin - arrowSize );
+                        arrowContainerElement.addClass('down');
+                    }
 
                 }
-                else if (settings.arrowposition == 'left') {
-                    dialogElement.css('left', buttonPosition.left);
-                    arrowContainerElement.css('margin-left', ( ($(this).outerWidth() / 2) - (arrowSize) )  );
+                else {
+
+                    if (settings.align == 'top') {
+                        dialogElement.css('top',  buttonPos.top );
+                        arrowContainerElement.css('margin-top', ($(this).outerHeight() / 2) - (arrowSize / 2) );
+                    }
+                    else if (settings.align == 'bottom') {
+                        dialogElement.css('top',  buttonPos.top - dialogElementInner.outerHeight() + $(this).outerHeight() );
+                        arrowContainerElement.css('margin-top', (dialogElementInner.outerHeight()) - ($(this).outerHeight() / 2)  - (arrowSize)  );
+                    }
+                    else {
+                        dialogElement.css('top', (buttonPos.top) - (dialogElementInner.outerHeight() / 2 ) + ($(this).outerHeight() / 2) );
+                        arrowContainerElement.css('margin-top', (dialogElementInner.outerHeight() / 2) - (arrowSize / 2) );
+                    }
+
+
+                    if (settings.position == 'right') {
+                        dialogElement.css('left',  buttonPos.left + $(this).outerWidth() + arrowSize + settings.dialogmargin  );
+                        arrowContainerElement.css('margin-left', -(arrowSize) - settings.arrowmargin );
+                        arrowContainerElement.addClass('left');
+                    }
+                    else {
+                        dialogElement.css('left',  buttonPos.left - dialogElementInner.outerWidth() - arrowSize - settings.dialogmargin  );
+                        arrowContainerElement.css('margin-left', dialogElementInner.outerWidth() - (arrowSize) + settings.arrowmargin );
+                        arrowContainerElement.addClass('right');
+                    }
+
                 }
-                else if (settings.arrowposition == 'right') {
-                    dialogElement.css('margin-left', (-1) * (dialogElement.outerWidth() - $(this).outerWidth())  );
-                    arrowContainerElement.css('margin-left', (dialogElement.outerWidth() - (($(this).outerWidth() / 2) + (arrowSize))  ) );
-                }
 
 
-                dialogElement.css('top', buttonPosition.top + $(this).height() + arrowSize + settings.dialogmargintop);
+                dialogElement.find('.confirmDialogInner').css('margin-left',  $(this).css('margin-left'));
+                dialogElement.find('.confirmDialogInner').css('margin-top',  $(this).css('margin-top'));
 
-
-                var arrowContainerTop = (-arrowSize) - settings.arrowmargintop ;
-
-
-                arrowContainerElement.css('top', arrowContainerTop + 'px');
-
-                // copy end
 
 
                 variables.nextlettertoyype = settings.texttotype.charAt(variables.nextletterindex);
@@ -135,7 +177,7 @@
                         var newConfirmStr = settings.texttotype.substr(0, variables.nextletterindex);
 
                         for (var i = variables.nextletterindex; i < settings.texttotype.length; i++) {
-                            newConfirmStr += '*';
+                            newConfirmStr += settings.charsymbol;
                         }
                         dialogElement.find('.untypedletterscontainer').text(newConfirmStr);
 
@@ -164,6 +206,14 @@
     // Hide all on esc
     $(document).keydown(function(e) {
         if (e.keyCode == 27) {
+            $('.confirmDialog').hide();
+        }
+    });
+
+    // Hide all on click out
+    $(document).click(function(e) {
+        var clickedElement = e.target;
+        if ( ($(clickedElement).closest('.confirmDialog').length == 0) && ($(clickedElement).next('.confirmDialog').length == 0) ) {
             $('.confirmDialog').hide();
         }
     });
