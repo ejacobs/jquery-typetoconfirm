@@ -77,15 +77,17 @@
 
                 $('#test4').typeToConfirm({
                     texttotype: 'delete',
-                    class: 'typetoconfirm green'
+                    class: 'typeToConfirm green'
                 });
                 $('#test5').typeToConfirm({
-                    position: 'below',
+                    position: 'below'
                 });
                 $('#test6').typeToConfirm({
                     position: 'below',
+                    onConfirm: function() {
+                        alert('worked');
+                    }
                 });
-
 
                 $('#formtest').typeToConfirm();
             </script>

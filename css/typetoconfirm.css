@@ -1,12 +1,12 @@
-.typetoconfirm { position: absolute; background-color: white; border: 5px solid #336699; float: left; height: auto; width: 350px; text-align: center; }
-.typetoconfirm .arrowContainer { background-image: url("images/blue-arrows.png"); background-repeat: no-repeat; height: 9px; position: absolute; width: 9px; }
-.typetoconfirm .arrowContainer.down { background-position: 0 -9px }
-.typetoconfirm .arrowContainer.up { background-position: 0 0 }
-.typetoconfirm .arrowContainer.right { background-position: -9px 0 }
-.typetoconfirm .arrowContainer.left { background-position: -9px -9px }
+.typeToConfirm { position: absolute; background-color: white; border: 5px solid #336699; float: left; height: auto; width: 300px; text-align: center; }
+.typeToConfirm .arrowContainer { background-image: url("images/blue-arrows.png"); background-repeat: no-repeat; height: 9px; position: absolute; width: 9px; }
+.typeToConfirm .arrowContainer.down { background-position: 0 -9px }
+.typeToConfirm .arrowContainer.up { background-position: 0 0 }
+.typeToConfirm .arrowContainer.right { background-position: -9px 0 }
+.typeToConfirm .arrowContainer.left { background-position: -9px -9px }
 
-.typetoconfirm.green { border: 5px solid #006632; }
-.typetoconfirm.green .arrowContainer { background-image: url("images/green-arrows.png"); }
+.typeToConfirm.green { border: 5px solid #006632; }
+.typeToConfirm.green .arrowContainer { background-image: url("images/green-arrows.png"); }
 
-.untypedletterscontainer { float: left; width: 100%; font-size: 24px; letter-spacing: 6px }
-.messagecontainer { float: left; font-family: Helvetica; width: 100%; text-align: center; margin-bottom: 5px  }
+.untypedLettersContainer { float: left; width: 100%; font-size: 24px; letter-spacing: 6px }
+.messageContainer { float: left; font-family: Helvetica; width: 100%; text-align: center; margin-bottom: 5px  }
