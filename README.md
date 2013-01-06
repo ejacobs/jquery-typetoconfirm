@@ -1,9 +1,10 @@
-jQuery TypeToConfirm by Evan Jacobs
+jQuery "Type To Confirm"
 =============
+by Evan Jacobs
 
 Sometimes user actions are major and cannot be undone. In these situations it's a good idea to make sure the user is
-absolutely sure they are aware of what they are doing. Type to confirm forces the user to slow down and read a message
-and type in a given word in order to proceed.
+absolutely sure they are aware of what they are doing. Type to confirm forces the user to slow down and type in a given
+word in order to proceed.
 
 Usage:
 * $('.mySubmitButton').typeToConfirm({texttotype: 'delete'});

@@ -1,7 +1,10 @@
 html, body { font-family: Helvetica; margin: 0; float: left; width: 100% }
-
+h1 { width: 100%; text-align: center }
+h2 { width: 100%; text-align: center; font-size: 12px; margin: 0; padding: 0 }
+pre { float: left; width: 100%; margin: 10px  }
+p { margin: 10px }
 .button {
-    margin: 95px;
+    margin: 5px 95px 95px 95px;
     float: left;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -39,3 +42,8 @@ html, body { font-family: Helvetica; margin: 0; float: left; width: 100% }
 .container {  position: relative; width: 900px; min-height: 1000px; background-color: #DFDFDF; margin: 0 auto; }
 .row { float: left; width: 100%; }
 .col { width: 31%; float: left; }
+
+input { border: 1px solid grey; width: 100px; float: none }
+.inputRow { width: 98%; margin: 1% }
+
+.footer { width: 99%; padding: 0.5%; float: left; background-color: black; color: white; text-align: right }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Type to Confirm</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="../typetoconfirm.js"></script>
+
+        <link rel="stylesheet" href="../css/typetoconfirm.css">
+        <link rel="stylesheet" href="css/examples.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <h1>jQuery Type to Confirm Examples</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>With onclick event</h2>
+                    <div class="button" id="test1" onclick="alert('onClick code executed')">test1</div>
+                </div>
+
+                <div class="col">
+                    <h2>Right side with bottom alignment</h2>
+                    <div class="button" id="test2">test2</div>
+                </div>
+
+                <div class="col">
+                    <h2>Below, middle aligned with custom message</h2>
+                    <div class="button" id="test3">test3</div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <h2>Custom class definition (green)</h2>
+                    <div class="button" id="test4">test4</div>
+                </div>
+
+                <div class="col">
+                    <h2>Custom symbol (%)</h2>
+                    <div class="button" id="test5">test5</div>
+                </div>
+
+                <div class="col">
+                    <h2>onConfirm event</h2>
+                    <div class="button" id="test6">test6</div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <h2>Custom before message</h2>
+                    <div class="button" id="test7">test7</div>
+                </div>
+
+                <div class="col">
+                    <h2>Case sensitive example</h2>
+                    <div class="button" id="test8">test8</div>
+                </div>
+
+                <div class="col">
+                    <h2>Form submission example</h2>
+                    <form action="" method="get">
+                        <div class="inputRow"><input type="text" name="field1" value="example" /></div>
+                        <div class="inputRow"><input type="text" name="field2" value="of" /></div>
+                        <div class="inputRow"><input type="text" name="field3" value="form" /></div>
+                        <div class="inputRow"><input type="text" name="field4" value="usage" /></div>
+                        <div class="inputRow"><input type="submit" id="formtest"></div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <script type="text/javascript">
+
+                $('#test1').typeToConfirm({
+                    position: 'auto',
+                    align: 'left',
+                    texttotype: 'iamsure'
+                });
+
+                $('#test2').typeToConfirm({
+                    align: 'bottom',
+                    position: 'right',
+                });
+
+                $('#test3').typeToConfirm({
+                    align: 'middle',
+                    position: 'below',
+                    aftermessage: 'You are about to do something very serious, please type the word \'{{t}}\' to confirm your action'
+                });
+
+                $('#test4').typeToConfirm({
+                    texttotype: 'delete',
+                    class: 'typeToConfirm green'
+                });
+
+                $('#test5').typeToConfirm({
+                    charsymbol: '%'
+                });
+
+                $('#test6').typeToConfirm({
+                    position: 'auto',
+                    onConfirm: function() {
+                        alert('Confirmed');
+                    }
+                });
+
+                $('#test7').typeToConfirm({
+                    beforemessage: 'this is <strong>just</strong> a test'
+                });
+
+                $('#test8').typeToConfirm({
+                    texttotype: 'Sensitive',
+                    casesensitive: true
+                });
+
+                $('#formtest').typeToConfirm();
+            </script>
+
+
+
+
+            <div class="row">
+
+                <hr>
+
+                <div class="col">
+                    <h2>Basic Usage</h2>
+
+<pre>
+$('#yourButton').typeToConfirm({
+    wordtotype: 'confirm'
+    /* other options here */
+});
+</pre>
+
+                    <p>
+                        Once instantiated, typeToConfirm will defer the onclick code until after confirmation. If the
+                        element is a form submission it will defer submission of the form until after confirmation (and
+                        and onclick event as well).
+                    </p>
+
+                    <p>
+                        Note that any code applied to the element via bind() or click() will be executed as soon as the
+                        user clicks, before any confirmation.
+                    </p>
+
+                </div>
+
+                <div class="col">
+                    <h2>Options</h2>
+                    <ul>
+                        <li>class</li>
+                        <li>texttotype</li>
+                        <li>casesensitive</li>
+                        <li>beforemessage</li>
+                        <li>aftermessage</li>
+                        <li>align</li>
+                        <li>position</li>
+                        <li>arrowmargin</li>
+                        <li>dialogmargin</li>
+                        <li>charsymbol</li>
+                        <li>closeonconfirm</li>
+                        <li>dialogclass</li>
+                        <li>beforemessageclass</li>
+                        <li>aftermessageclass</li>
+                        <li>innerdialogclass</li>
+                        <li>untypedlettersclass</li>
+                        <li>arrowcontainerclass</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h2>Events</h2>
+                    <ul>
+                        <li>onCreate</li>
+                        <li>onConfirm</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    <div class="footer">Copyright 2013, Evan Jacobs</div>
+    </body>
+</html>
+
+
+
