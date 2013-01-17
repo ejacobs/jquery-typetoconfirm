@@ -1,0 +1,39 @@
+{
+    "name": "typetoconfirm",
+    "title": "jQuery Type to Confirm",
+    "description": "Require a user to type a given message in order to perform an action.",
+    "keywords": [
+        "type",
+        "confirm",
+        "confirmation"
+    ],
+    "version": "1.0",
+    "author": {
+        "name": "Evan Jacobs",
+        "url": "http://ejacobs.net"
+    },
+    "maintainers": [
+        {
+            "name": "Evan Jacobs",
+            "email": "evan.jacobs2@gmail.com",
+            "url": "http://ejacobs.net"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        },
+        {
+            "type": "GPLv2",
+            "url": "http://www.opensource.org/licenses/GPL-2.0"
+        }
+    ],
+    "bugs": "https://github.com/jquery/jquery-color/issues",
+    "homepage": "https://ejacobs.net/projects/typetoconfirm",
+    "docs": "https://github.com/ejacobs/jquery-typetoconfirm",
+    "download": "http://code.jquery.com/#color",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
