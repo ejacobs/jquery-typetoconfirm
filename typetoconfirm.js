@@ -1,6 +1,7 @@
 /*
 * jQuery Type to Confirm v0.7
-* https://github.com/ejacobs/typetoconfirm
+* Repository: https://github.com/ejacobs/typetoconfirm
+* Project Page: http://ejacobs.net/projects/typetoconfirm
 *
 * Copyright 2013, Evan Jacobs
 * Dual licensed under the MIT or GPL Version 2 licenses.
