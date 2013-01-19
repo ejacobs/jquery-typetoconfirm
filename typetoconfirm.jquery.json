@@ -32,7 +32,7 @@
     "bugs": "https://github.com/jquery/jquery-color/issues",
     "homepage": "https://ejacobs.net/projects/typetoconfirm",
     "docs": "https://github.com/ejacobs/jquery-typetoconfirm",
-    "download": "https://github.com/ejacobs/jquery-typetoconfirm",
+    "download": "http://ejacobs.net/downloads/projects/typetoconfirm/jquery.typetoconfirm-1.0.0.zip",
     "dependencies": {
         "jquery": ">=1.5"
     }
