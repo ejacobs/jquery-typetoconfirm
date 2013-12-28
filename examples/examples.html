@@ -8,9 +8,14 @@
         <meta http-equiv="Content-Language" content="en-US" />
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="../js/jquery.bootstrap.js"></script>
         <script src="../typetoconfirm.js"></script>
 
+
         <link rel="stylesheet" href="../css/typetoconfirm.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootswatch.min.css">
+
         <link rel="stylesheet" href="css/examples.css">
     </head>
     <body>
@@ -20,6 +25,9 @@
                 <h1>jQuery Type to Confirm Examples</h1>
             </div>
             <div class="row">
+
+
+
                 <div class="col">
                     <h2>With onclick event</h2>
                     <div class="button" id="test1" onclick="alert('onClick code executed')">test1</div>
@@ -73,16 +81,17 @@
                         <div class="inputRow"><input type="text" name="field2" value="of" /></div>
                         <div class="inputRow"><input type="text" name="field3" value="form" /></div>
                         <div class="inputRow"><input type="text" name="field4" value="usage" /></div>
-                        <div class="inputRow"><input type="submit" id="formtest"></div>
+                        <div class="inputRow"><input type="submit" id="formtest" value="Submit"></div>
                     </form>
                 </div>
             </div>
 
             <script type="text/javascript">
 
+
                 $('#test1').typeToConfirm({
                     position: 'auto',
-                    align: 'left',
+                    align: 'right',
                     texttotype: 'iamsure'
                 });
 
